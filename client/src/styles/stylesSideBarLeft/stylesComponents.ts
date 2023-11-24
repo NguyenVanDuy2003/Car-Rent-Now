@@ -2,8 +2,6 @@ import { styled } from "@mui/system";
 import Box from "@mui/material/Box";
 import {
   FormLabel,
-  FormControl,
-  Grid,
   FormControlLabel,
   Slider,
 } from "@mui/material";

@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  mongodb:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: duynguyen
+      MONGO_INITDB_ROOT_PASSWORD: 1BTe7JseRglYpGEe
+
+  backend: 
+    build: ./server
+    ports:
+      - 8000:8000
+    depends_on:
+      - mongodb
+    environment:
+      MONGODB_URL: mongodb://nguyenvanduy:1BTe7JseRglYpGEe@cluster0.l7bkwur.mongodb.net/?retryWrites=true&w=majority
+
+  frontend:
+    build: ./client
+    ports:
+      - 3000:3000
+    depends_on:
+      - backend

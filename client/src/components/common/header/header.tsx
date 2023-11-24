@@ -45,9 +45,7 @@ function Header({ user }: any) {
   const handleClickOpenNewCar = () => {
     setOpenNewCar(true);
   };
-  const handleCloseNewCar = (value: string) => {
-    setOpenNewCar(false);
-  };
+
 
   return (
     <>

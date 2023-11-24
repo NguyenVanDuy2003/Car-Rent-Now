@@ -2,7 +2,7 @@
 
 export const request = async (payload: any, options: any = {}) => {
   console.log(payload);
-  const res = await fetch(`http://localhost:4000/graphql`, {
+  const res = await fetch(`http://localhost:8000/graphql`, {
     method: "POST",
     headers: {
       "content-type": "application/json",

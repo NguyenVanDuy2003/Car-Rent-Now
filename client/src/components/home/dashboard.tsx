@@ -9,9 +9,8 @@ import {
   IconButton,
   Radio,
   Select,
-  Typography,
 } from "@mui/material";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import dayjs from "dayjs";
 
 import {
@@ -51,16 +50,16 @@ import { Link, useNavigate } from "react-router-dom";
 
 import SideBarLeft from "../common/sileBarLeft/sideBarLeft";
 import { removeCar, updateHeartCar } from "../../api/api";
-import axios from "axios";
 
 const DashBoard = ({ dataCars }: any) => {
   const navigate = useNavigate();
   const cars = dataCars?.cars;
-  const [types, setTypes] = useState();
-  const [capacity, setCapacity] = useState();
-  const [price, setPirce] = useState(0);
-  const [filter, setFilter] = useState();
+  // const [types, setTypes] = useState();
+  // const [capacity, setCapacity] = useState();
+  // const [price, setPirce] = useState(0);
+  // const [filter, setFilter] = useState();
   const [heart, setHeart] = useState<string>();
+  console.log(heart)
 
   //  radio
   const [radio, setRadio] = useState("a");
@@ -91,16 +90,16 @@ const DashBoard = ({ dataCars }: any) => {
     await removeCar(id);
   };
 
-  const data = axios
-    .get("http://localhost:8000/users")
-    .then((response) => {
-      const data = response.data;
-      console.log(data);
-      // Xử lý dữ liệu nhận được từ server ở đây
-    })
-    .catch((error) => {
-      // Xử lý lỗi ở đây
-    });
+  // const data = axios
+  //   .get("http://localhost:8000/users")
+  //   .then((response) => {
+  //     const data = response.data;
+  //     console.log(data);
+  //     // Xử lý dữ liệu nhận được từ server ở đây
+  //   })
+  //   .catch((error) => {
+  //     // Xử lý lỗi ở đây
+  //   });
 
   // //   filter car
   // const filterCar = () => {
