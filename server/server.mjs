@@ -14,8 +14,8 @@ const app = express();
 const httpServer = http.createServer(app);
 
 //connect to mongodb atlas
-const URI = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.bv93dlr.mongodb.net/?retryWrites=true&w=majority`;
-const PORT = process.env.PORT || 4000;
+const URI = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.l7bkwur.mongodb.net/?retryWrites=true&w=majority`;
+const PORT = process.env.PORT || 8000;
 
 const server = new ApolloServer({
   typeDefs,
@@ -36,5 +36,5 @@ mongoose
     console.log("connect to DB");
 
     await new Promise((resolve) => httpServer.listen({ port: PORT }, resolve));
-    console.log("🚀 Server ready at http://localhost:4000");
+    console.log("🚀 Server ready at http://localhost:8000");
   });

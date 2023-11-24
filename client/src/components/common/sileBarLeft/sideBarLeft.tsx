@@ -1,10 +1,8 @@
 import {
-  Box,
   Checkbox,
   FormControl,
   FormGroup,
   FormLabel,
-  Slider,
 } from "@mui/material";
 import { useState } from "react";
 import {
@@ -30,7 +28,7 @@ function SideBarLeft() {
     person_6: false,
     person_8: false,
   });
-  const [price, setPrice] = useState(0);
+  // const [price, setPrice] = useState(0);
 
   const handleChange = (event: any) => {
     setState({
@@ -45,8 +43,8 @@ function SideBarLeft() {
     });
   };
 
-  const handleChangePrice = (event: any) => {
-    setPrice(event.target.value);
+  const handleChangePrice = () => {
+    // setPrice(event.target.value);
   };
 
   const { sport, suv, mpv, sedan, coupe, hatchback } = state;

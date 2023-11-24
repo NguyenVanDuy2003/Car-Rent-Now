@@ -1,5 +1,4 @@
 import { styled } from "@mui/system";
-import Box from "@mui/material/Box";
 import { FormLabel, Grid, Rating, Typography } from "@mui/material";
 
 export const FormTitle = styled(Typography)({

@@ -1,6 +1,6 @@
 import { Box, Button, FormLabel, Grid, TextField } from "@mui/material";
 // import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { addNewUser } from "../../api/api";
 
@@ -150,9 +150,9 @@ const SignUp = () => {
               }}
             >
               <input type="file" onChange={handleAccount} id="image" />
-              <label for="image" class="btn-2">
+              <span>
                 Upload Avatar
-              </label>
+              </span>
             </Grid>
           </Grid>
           <Grid item xs={12}>
